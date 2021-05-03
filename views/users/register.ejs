@@ -1,0 +1,46 @@
+<%layout("layouts/boilerplate")%>
+
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h1 class="text-center my-3">Register</h1>
+        <form class = "needs-validation" action = "/register", method="POST" novalidate>
+            <div>
+                <label class="form-label" for="firstName">First Name</label>
+                <input class="form-control" id ="firstName" name="firstName" type ="text" autofocus required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <div>
+                <label class="form-label" for="lastName">Last Name</label>
+                <input class="form-control" id ="lastName" name="lastName" type ="text" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <div>
+                <label class="form-label" for="email">Enter Email</label>
+                <input class="form-control" id ="email" name="email" type ="email" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <div>
+                <label class="form-label" for="username">Enter Username</label>
+                <input class="form-control" id ="username" name = "username" type ="text" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <div>
+                <label class="form-label" for="password">Enter Password</label>
+                <input class="form-control" id="password" name = "password" type ="password" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <button class="btn btn-success mt-3">Register</button>
+        </form>
+    </div>
+</div>

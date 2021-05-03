@@ -1,0 +1,32 @@
+<%layout("layouts/boilerplate")%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-4">
+                <h1>Add a new photo</h1>
+                <form action="/photos" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <div class="form-file custom-file">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="image"></label>
+                                <input type="file" class="form-control" id="image" name="image" multiple required>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="location">Enter Location</label>
+                        <input class="form-control" type="text" id="location" name=photos[location]>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="caption">Enter Caption</label>
+                        <textarea class="form-control" id="caption" name="photos[caption]" cols="30"
+                            rows="2"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn btn-dark mb-3">Submit</button>
+                    </div>
+                </form>
+                <a href="/photos">Cancel</a>
+            </div>
+        </div>
+    </div>

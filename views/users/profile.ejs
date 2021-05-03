@@ -1,0 +1,46 @@
+<%layout("layouts/boilerplate")%>
+<link rel="stylesheet" href="/css/profile.css">
+
+<div class="offset-1">
+<h1 class="py-3"><%=user.firstName%>'s Profile</h1>
+<div class = "py-3">
+    <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, dolorum.</p>
+</div>
+</div>
+<div class="row main-container">
+    <div class="col-lg offset-1">
+        <% for (let photo of photos) { %> 
+        <div class="card">
+            <div id="controls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <% photo.images.forEach(function(img, i) { %> 
+                  <div class="carousel-item <%= i === 0 ? "active": ""%>">
+                    <a href="/photos/<%=photo._id%>">
+                        <img src="<%=img.url%>" class="d-block w-100 image" alt="...">
+                    </a>
+                  </div>
+                  <% }) %> 
+                  <% if (photo.images.length !== 1) { %> 
+                <button class="carousel-control-prev" type="button" data-bs-target="#controls data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#controls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                <% } %>
+                
+            </div>
+            
+        <div class="card-body">
+          <h6 class="card-subtitle text-muted"> <a class="location" href="/photos/<%=photo._id%>/location"><%=photo.location %></a></h6>
+          <p class="card-text pt-2 caption"><%=photo.caption%> </p>
+        </div>
+      </div>
+      
+  </div>
+  <% } %> 
+</div>
+</div>
+

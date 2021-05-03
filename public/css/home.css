@@ -1,0 +1,72 @@
+.main-container {
+  background-color: #dad7cd;
+}
+
+.card-title {
+  background-color: #e56b6f;
+  padding-bottom: 0px;
+  margin-bottom: 2px;
+}
+
+.user_name {
+  color: white;
+  text-decoration: none;
+}
+
+.user_name_para {
+  margin-bottom: 2px;
+}
+
+.location_para {
+  margin-bottom: 2px;
+}
+
+.location {
+  color: white;
+  text-decoration: none;
+  font-size: 0.7rem;
+}
+
+.card-subtitle {
+  background-color: #e56b6f;
+}
+
+.card-body {
+  background-color: #e56b6f;
+  color: white;
+  padding-bottom: 16px;
+}
+
+.buttons {
+  background-color: #e56b6f;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.btn {
+  background-color: #b56576 !important;
+  border: none;
+}
+
+.list-head {
+  background-color: #233d4d !important;
+  text-decoration: underline;
+}
+
+.list-users {
+  background-color: #e56b6f;
+  border: none;
+}
+
+.list-user {
+  text-decoration: none;
+  color: white;
+}
+
+.suggested {
+  /* margin-right: 5rem; */
+}
+
+.first-col {
+  margin: 0px 50px 0px 120px !important;
+}

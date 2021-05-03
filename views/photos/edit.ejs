@@ -1,0 +1,24 @@
+<%layout("layouts/boilerplate")%>
+<div class="row">
+    <div class="col-md-4 offset-3">
+    <h1 class="text-center">Edit a photo</h1>
+    <form class = "form-label" action = "/photos/<%=photo._id%>?_method=PUT" method="POST">
+        <div class="mb-3">
+        <label class = "form-label" for ="photo">Add Photo</label>
+        <input class ="form-control" type="text" id="photo" name=photos[image] value=<%=photo.image%> >
+        </div>
+        <div class="mb-3">
+            <label class = "form-label" for ="location">Enter Location</label>
+            <input class ="form-control" type="text" id="location" name=photos[location] value = <%=photo.location%>>
+        </div>
+        <div class="mb-3">
+            <label class = "form-label" for ="caption">Enter Caption</label>
+            <textarea  class ="form-control" id="caption" name="photos[caption]"cols="30" rows="3"><%=photo.caption%></textarea>
+        </div>
+        <div>
+            <button class="btn btn-dark mb-3">Submit</button>
+        </div>
+    </form>
+    <a href="/photos/<%=photo._id%>">Cancel</a>
+</div>
+</div>
