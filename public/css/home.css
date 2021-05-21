@@ -43,7 +43,7 @@
   margin-bottom: 0px;
 }
 
-.btn {
+.btn-comment {
   background-color: #b56576 !important;
   border: none;
 }
@@ -67,6 +67,11 @@
   /* margin-right: 5rem; */
 }
 
-.first-col {
-  margin: 0px 50px 0px 120px !important;
+.btn-heart {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }

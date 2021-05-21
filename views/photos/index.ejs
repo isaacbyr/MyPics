@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/css/home.css">
 
     <div class="row main-container align-items-center">
-        <div class="first-col col-md-6 rounded">
+        <div class="first-col col-md-6 col-10 offset-md-2">
             <div> 
                 <% for(let photo of photos) { %> 
                 <div class="card main-card my-4" style="width: 30rem;">
@@ -34,16 +34,20 @@
                         <% } %> 
                       </div>
                     <div class="card-body">
+                      <p><%=photo.likes.length %> 
+              <%= (photo.likes.length === 1) ? "Like" : "Likes"  %> </p>
                       <p class="card-text"><%=photo.caption %> </p>
                     </div>
                     <p class="buttons">
-                      <button class="btn btn-sm btn-dark px-1 mx-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <button class="btn btn-sm btn-dark px-1 mx-1 btn-comment" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                         Show Comments
                       </button>
                       <a href="/photos/<%=photo._id%>">
-                        <button class="btn btn-sm btn-dark px-1 mx-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+
+                        <button class="btn btn-sm btn-dark px-1 mx-1 btn-comment" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                           Add Comment
                         </button>
+                      
                       </a>
                     </p>
                     <div class="collapse" id="collapseExample">
@@ -63,7 +67,7 @@
         </div>
 
 
-        <div class="suggested col-md-3 align-self-start mt-5">
+        <div class="suggested col-md-3 align-self-start mt-5 d-none d-md-block">
             <div class="row justify-content-center">
               <div class="col-md-8 offset-1 mt-5">
             <div class="list-group">
@@ -78,5 +82,3 @@
         </div>
         </div>
     </div>
-
-   

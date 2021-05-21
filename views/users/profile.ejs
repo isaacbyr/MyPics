@@ -3,6 +3,15 @@
 
 <div class="offset-1">
 <h1 class="py-3"><%=user.firstName%>'s Profile</h1>
+<div>
+  <a class ="my_locations"href="/<%=user._id%>/locations">
+    <% if(user._id.equals(currentUser_id)) { %> 
+      My Locations
+      <% } else { %> 
+        See <%=user.firstName%>'s Locations
+        <% } %>  
+  </a>
+</div>
 <div class = "py-3">
     <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, dolorum.</p>
 </div>

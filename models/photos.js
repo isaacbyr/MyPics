@@ -1,38 +1,44 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const imageSchema = new Schema({
-    url: String,
-    filename: String
+  url: String,
+  filename: String,
 })
 
 const photoSchema = new Schema({
-    images: [imageSchema],
-    geometry: {
-        type: {
-            type: "String",
-            enum: ["Point"],
-            required: true
-        },
-        coordinates: {
-            type: [Number],
-            required: true
-        }
+  images: [imageSchema],
+  geometry: {
+    type: {
+      type: 'String',
+      enum: ['Point'],
+      required: true,
     },
-    location: String,
-    caption: String,
-    comments: [
+    coordinates: {
+      type: [Number],
+      required: true,
+    },
+  },
+  location: String,
+  caption: String,
+  comments: [
     {
-        type: Schema.Types.ObjectId,
-        ref: "Comment"
-    }
-    ],
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }
+      type: Schema.Types.ObjectId,
+      ref: 'Comment',
+    },
+  ],
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
+  likes: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Like',
+    },
+  ],
 })
 
-const photo = mongoose.model("Photo", photoSchema)
+const photo = mongoose.model('Photo', photoSchema)
 
-module.exports= photo;
+module.exports = photo
